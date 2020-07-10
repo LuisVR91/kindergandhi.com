@@ -2,7 +2,7 @@
 	Canvas: Photographer
 -----------------------------------------------------------------*/
 
-:root { --darkcolor: #050505; }
+:root {--darkcolor: #050505;--primary: #E11013;--custom1: #E11013;}
 
 #header {
 	z-index: 399;
@@ -33,10 +33,10 @@ body.dark,
 .dark.section { background-color: var(--darkcolor) !important; }
 
 .gradient-border {
-	--borderWidth: 3px;
+	--borderWidth: 6px;
 	background: #1D1F20;
 	position: relative;
-	border-radius: 0;
+	border-radius: 0px;
 }
 
 .gradient-border::after {
@@ -46,7 +46,7 @@ body.dark,
 	left: calc(-1 * var(--borderWidth));
 	height: calc(100% + var(--borderWidth) * 2);
 	width: calc(100% + var(--borderWidth) * 2);
-	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	background: linear-gradient(60deg, #ffffff, #2be4e4, #3862d8, #82ace7, #2d4fa4);
 	border-radius: var(--borderWidth);
 	z-index: -1;
 	animation: animatedgradient 3s ease alternate infinite;
@@ -250,11 +250,12 @@ body.dark,
 .dark-mode {
 	position: fixed;
 	top: auto;
-	right: 11px;
 	bottom: 80px;
 	text-align: center;
 	margin: 0 auto;
 	z-index: 299;
+	left: auto;
+	right: 30px;
 }
 
 .dark-mode i {
@@ -265,7 +266,7 @@ body.dark,
 	text-align: center;
 	font-size: 16px;
 	color: #FFF !important;
-	background-color: #111;
+	background-color: #1C914D;
 	border-radius: 50%;
 	margin: 0 auto;
 }

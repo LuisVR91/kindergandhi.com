@@ -233,7 +233,7 @@ h2 > span:not(.nocolor):not(.badge),
 h3 > span:not(.nocolor):not(.badge),
 h4 > span:not(.nocolor):not(.badge),
 h5 > span:not(.nocolor):not(.badge),
-h6 > span:not(.nocolor):not(.badge) { color: #1ABC9C; }
+h6 > span:not(.nocolor):not(.badge) {color: #1ABC9C;}
 
 p,
 pre,
@@ -259,7 +259,6 @@ small { font-family: 'Lato', sans-serif; }
 	float: none;
 	width: 100%;
 	margin: 0 auto;
-	background-color: #FFF;
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.1);
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -2701,13 +2700,13 @@ html[xmlns] .slider-wrap {
 
 #header {
 	position: relative;
-	background-color: #FFF;
+	background-color: yellow;
 	border-bottom: 1px solid #F5F5F5;
 }
 
 #header-wrap {
 	position: relative;
-	background-color: #FFF;
+	background-color: #F8EA53;
 	width: 100%;
 }
 
@@ -2771,7 +2770,7 @@ html[xmlns] .slider-wrap {
 
 	#header.transparent-header,
 	#header.transparent-header:not(.sticky-header) #header-wrap {
-		background: transparent;
+		/* background: transparent; */
 		border-bottom: 1px solid transparent;
 		z-index: 299;
 	}
@@ -5244,6 +5243,7 @@ body:not(.stretched) .slider-parallax .slider-inner { left: auto; }
 		display: flex !important;
 		flex-direction: column;
 		justify-content: center;
+		background-size: 50em auto !important;
 	}
 
 	#slider .slider-inner {
@@ -6195,7 +6195,7 @@ body:not(.has-plugin-html5video) .video-wrap video {
 
 .content-wrap {
 	position: relative;
-	padding: 80px 0;
+	padding: 40px 0;
 	overflow: hidden;
 }
 
@@ -8967,6 +8967,8 @@ body:not(.device-touch) .button.button-full strong {
 
 .promo {
 	position: relative;
+	margin: 5px 0;
+	border-radius: 21px !important;
 }
 
 .promo h3 {
@@ -9016,9 +9018,10 @@ body:not(.device-touch) .button.button-full strong {
 /* Promo - Dark
 -----------------------------------------------------------------*/
 
+
+
 .promo-dark {
-	border: 0 !important;
-	background-color: #333;
+	background-color: #1C914D;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	border-radius: 3px;
 }
@@ -9044,7 +9047,7 @@ body:not(.device-touch) .button.button-full strong {
 /* Promo - Parallax
 -----------------------------------------------------------------*/
 
-.promo.parallax { padding: 80px 0 !important; }
+.promo.parallax {padding: 80px 0 !important;}
 
 
 /* Promo - Mini
@@ -9052,6 +9055,7 @@ body:not(.device-touch) .button.button-full strong {
 
 .promo-mini {
 	text-align: left;
+	background-color: red;
 }
 
 .promo-mini h3 {
@@ -14641,6 +14645,7 @@ label.checkbox { padding-left: 20px; }
 	width: 100%;
 	margin: 0;
 	box-shadow: none;
+	background-color: var(--color7) !important;
 }
 
 
@@ -14691,7 +14696,7 @@ label.checkbox { padding-left: 20px; }
 }
 
 .shape-divider-fill {
-	fill: #FFF;
+	fill: var(--color7) !important;
 	transform-origin: center;
 	transform: rotateY(0deg);
 }

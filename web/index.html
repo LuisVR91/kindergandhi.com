@@ -3,7 +3,13 @@
 <head>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="SemiColonWeb" />
+	<meta name="author" content="Kinder Gandhi" />
+
+	<meta name="theme-color" content="#B12A34">
+	<link  rel="icon"   href="icons/icon-32.png" type="image/png" />
+	<link rel="manifest" href="app.webmanifest">
+
+
 
 	<!-- Stylesheets
 	============================================= -->
@@ -29,11 +35,11 @@
 	<!-- / -->
 
 	<!-- Photographer Specific Color -->
-	<link rel="stylesheet" href="css/colors.php?color=e41c34" type="text/css" />
+	<link rel="stylesheet" href="css/colors.css" type="text/css" />
 
 	<!-- Document Title
 	============================================= -->
-	<title>Photographer | Canvas</title>
+	<title>Kinder Gandhi</title>
 
 </head>
 
@@ -51,7 +57,7 @@
 			<div id="header-wrap">
 				<div class="container">
 					<div class="header-row">
-						<a href="demo-photography.html"><img src="demos/photography/images/logo@2x.png" alt="Canvas Logo" height="100"></a>
+						<a href="./"><img src="images/logo.png" alt="Canvas Logo" height="100"></a>
 
 						<div>
 							<div class="primary-menu-trigger hamburger">
@@ -60,13 +66,16 @@
 							</div>
 							<div class="global-menu">
 								<div class="global-menu__wrap">
-									<a class="global-menu__item" href="#">Home</a>
-									<a class="global-menu__item" href="#">Photography</a>
-									<a class="global-menu__item" href="#">About</a>
-									<a class="global-menu__item" href="#">Contact</a>
+
+									<a class="global-menu__item" href="#">Inicio</a>
+									<a class="global-menu__item" href="#">Nosotros</a>
+									<a class="global-menu__item" href="#">Galería</a>
+									<a class="global-menu__item" href="#">Inscripciones</a>
+									<a class="global-menu__item" href="#">Gandhi APP</a>
 								</div>
 							</div>
 							<svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+								<path class="shape-overlays__path" d=""></path>
 								<path class="shape-overlays__path" d=""></path>
 								<path class="shape-overlays__path" d=""></path>
 								<path class="shape-overlays__path" d=""></path>
@@ -82,21 +91,25 @@
 
 		<!-- Slider
 		============================================= -->
-		<section id="slider" class="slider-element min-vh-60 min-vh-md-100 include-header" style="background: url('demos/photographer/images/dots-1.png') 100% 0 no-repeat; background-size: 60% auto">
+		<section id="slider" class="slider-element min-vh-60 min-vh-md-100 include-header" style="background: url(./src/img/secction/dots3.png) right 0 no-repeat;
+		background-size: 100% auto;">
 			<div class="slider-inner">
 
 				<div class="vertical-middle">
 					<div class="container parallax py-5" data-0="opacity: 1; overflow: visible; margin-top:0px" data-top-bottom="opacity: 0; overflow: visible; margin-top:100px">
 
 						<div class="row align-items-center col-mb-50">
-							<div class="col-md-6">
+							<div class="col-md-7">
 								<div class="py-5 py-md-0">
-									<small class="text-muted text-uppercase font-weight-light ls4 mb-1 d-block">Photographer</small>
-									<h2 class="text-dark">Shooting Your Memory.</h2>
-									<h5 class="font-weight-light ls1" style="opacity: .7">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quasi quo ea magnam dignissimos quis obcaecati aut in.</h5>
+									<small class="text-muted text-uppercase font-weight-light ls4 mb-1 d-block">¡Bienvenido! </small>
+									<h2
+									data-class-xs="t-kinder"
+									class="text-dark">Kinder Gandhi</h2>
+									<h5 class="font-weight-light ls1 d-none d-md-block" style="opacity: .7"> Contamos con el apoyo de programas que involucran a los padres de familia, siempre con un trabajo en equipo que permita fortalecer las bases del amor, la fraternidad y el compromiso de ser mejores en nuestra vida diaria.
+									</h5>
 									<div class="d-flex align-items-center mt-5">
 										<a href="#" class="button button-change button-rounded overflow-hidden nott button-large font-weight-normal mx-0 px-5">
-											<span><i class="icon-line2-envelope font-weight-semibold"></i> Email Me Here</span>
+											<span><i class="icon-line2-envelope font-weight-semibold"></i> Inscripciones</span>
 										</a>
 										<a href="https://facebook.com/semicolonweb" target="_blank" class="d-none d-sm-inline-block my-0 mr-0 ml-4 social-icon si-small si-borderless si-facebook">
 											<i class="icon-facebook"></i>
@@ -110,26 +123,6 @@
 								</div>
 							</div>
 
-							<div class="col-md-6 pl-md-5 pl-lg-0">
-								<div class="row align-items-stretch">
-									<div class="col-lg-6 col-md-12 rounded col-6 d-none d-sm-flex" style="background: url('demos/photographer/images/1.jpg') center center no-repeat; background-size: cover;">
-									</div>
-									<div class="col-6 d-none d-lg-flex"></div>
-									<div class="col-6 d-none d-lg-flex"></div>
-									<div class="col-lg-6 col-md-12 gradient-border shadow-sm col-sm-6 col-12 max-height" style="background-color: #FFF;">
-										<div class="feature-box flex-column px-3 py-4 fbox-sm">
-											<div class="fbox-media">
-												<img src="demos/photographer/images/icons/instagram.svg" class="rounded-0 bg-transparent text-left" alt="Image" style="height: 48px;">
-											</div>
-											<div class="fbox-content">
-												<div class="d-block" style="margin: 90px auto"></div>
-												<p class="mb-0 font-weight-normal">View My Stories</p>
-												<h3 class="font-weight-medium mt-1 mb-0 d-flex align-self-end"><a href="https://instagram.com/semicolonweb" target="_blank" class="text-dark">Instagram <i class="icon-line-arrow-right font-weight-semibold position-relative" style="top: 2px"></i></a></h3>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 
 					</div>
@@ -137,6 +130,83 @@
 
 			</div>
 		</section><!-- #Slider End -->
+	
+
+
+
+
+
+
+
+<div class="section lazy my-4 py-5 min-vh-0" data-bg="./src/img/secction/s3.jpg" style="background-position: center center; background-repeat: no-repeat; background-size: cover;background-color: var(--color7) !important;">
+
+	<!-- SECCION  -->
+
+	
+
+
+
+	<div class="container py-5">
+		<div class="row">
+	
+			<!-- inicio de tarjetas -->
+			<div class="col-md-6 col-lg-4">
+				<div class="promo promo-color1  promo-mini text-center p-5">
+					<div class="row align-items-center">
+						<div class="col-12">
+							<h3>
+								<span>¡Inscripciones abiertas!</span>, ¡contáctanos!
+								resolveremos todas tus dudas.
+								</h3>
+						</div>
+						<div class="col-12 mt-4">
+							<a href="#" class="button button-black button-circle button-rounded m-0"><i class="icon-phone"></i> Presiona aquí</a>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+	
+			<div class="col-md-6 col-lg-4">
+				<div class="promo promo-color2  promo-mini text-center p-5">
+					<div class="row align-items-center">
+						<div class="col-12">
+							<h3>Conoce nuestros <span>!increibles talleres!</span> en horario extendido, ballet, hip hop, música …
+							</h3>
+						</div>
+						<div class="col-12 mt-4">
+							<a href="#" class="button button-black button-circle button-rounded m-0"> <i class="icon-link"></i>Talleres</a>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<div class="col-md-12 col-lg-4">
+				<div class="promo promo-color3 promo-mini text-center p-5">
+					<div class="row align-items-center">
+						<div class="col-12">
+							<h3><span>Sistema para padres</span>, ahora es más fácil ver las tareas de tus pequeños.</h3>
+						</div>
+						<div class="col-12 mt-4">
+							<a href="#" class="button button-primary button-circle button-rounded m-0"><i class="icon-book-open"></i>Gandhi App</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- fin de tarjeta -->
+	
+		</div>
+	</div>
+	<!-- fin row de tarjetas -->
+
+
+	<!-- SECCION  -->
+
+	
+		<div class="shape-divider" data-shape="cloud-3" data-height="150"></div>
+		<div class="shape-divider" data-shape="cloud-3" data-position="bottom" data-height="150"></div>
+
+</div>
 
 		<!-- Content
 		============================================= -->
@@ -181,7 +251,7 @@
 											<div class="flip-card-back dark" style="background-image: url('demos/photographer/images/features/1-1.jpg')">
 												<div class="flip-card-inner mt-3">
 													<h4 class="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit.</h4>
-													<a href="#" class="button button-change overflow-hidden rounded nott font-weight-light m-0">
+													<a id="ejemplo" href="#" class="button button-change overflow-hidden rounded nott font-weight-light m-0">
 														<span>View Photos</span>
 													</a>
 												</div>
@@ -493,7 +563,7 @@
 
 				<!-- Counter Section
 				============================================= -->
-				<div class="section" style="background: #FFF url('demos/photographer/images/dots.png') 170% 0% no-repeat; background-size: 60% auto">
+				<div class="section" style="background: #FFF url('./src/img/secction/dots3.png') 170% 0% no-repeat; background-size: 60% auto">
 
 					<div class="container">
 						<div class="row justify-content-between">
@@ -757,14 +827,20 @@
 
 	<!-- Dark Mode Switch
 	============================================= -->
-	<a href="demo-photographer-dark.html" class="dark-mode" data-animate="fadeInRight">
-		<span>Dark Mode</span><i class="icon-line-toggle shadow"></i>
+	<a href="app/index.html" class="dark-mode" data-animate="fadeInRight">
+		<span>Tarea</span><i class="icon-book2 shadow "></i>
 	</a>
-
+	
 	<!-- JavaScripts
 	============================================= -->
 	<script src="js/jquery.js"></script>
-	<script src="js/plugins.min.js"></script>
+
+		<!-- <script src="js/plugins.min.js"></script> -->
+
+		<script src="js/plugins.easing.js"></script>
+		<!-- <script src="js/plugins.bootstrap.js"></script> -->
+
+		<script>window.scwJsPath = './js';</script>
 
 	<!-- Photograph Hover Plugin
 	============================================= -->
@@ -788,5 +864,6 @@
 
 	</script>
 
+<script src="core/bin/core.js" ></script>
 </body>
 </html>

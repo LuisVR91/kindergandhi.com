@@ -60,7 +60,7 @@ body {
 	line-height: 1.5;
 	color: #212529;
 	text-align: left;
-	background-color: #fff;
+	background-color: var(--custom7) !important;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2573,14 +2573,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
 	color: #fff;
-	background-color: #007bff;
-	border-color: #007bff;
+	background-color: var(--primary);
+	/* border-color: #c61114; */
 }
 
 .btn-primary:hover {
 	color: #fff;
-	background-color: #0069d9;
-	border-color: #0062cc;
+	background-color: var(--color3);
+	/* border-color: #0062cc; */
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -10062,7 +10062,8 @@ button.bg-dark:focus {
 }
 
 .font-weight-light {
-	font-weight: 300 !important;
+	font-weight: 500 !important;
+	text-shadow: white 2px 0px 2px, white 1px 0px 0px;
 }
 
 .font-weight-lighter {
@@ -10146,7 +10147,7 @@ a.text-light:hover, a.text-light:focus {
 }
 
 .text-dark {
-	color: #343a40 !important;
+	color: black!important;
 }
 
 a.text-dark:hover, a.text-dark:focus {
@@ -10275,4 +10276,3 @@ a.text-dark:hover, a.text-dark:focus {
 		border-color: #dee2e6;
 	}
 }
-/*# sourceMappingURL=bootstrap.css.map */

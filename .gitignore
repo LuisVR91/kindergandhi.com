@@ -1,4 +1,11 @@
 ORIGINAL
 TOOLS
-CPANEL_GIT
+CPANEL_GIT.url
 CPANEL_PASS.txt
+*.ai
+*.ps
+*.AI
+*.PS
+*.EPS
+*.eps
+*.zip

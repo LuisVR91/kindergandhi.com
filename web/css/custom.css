@@ -5,4 +5,76 @@
 	Overwriting Default Theme Styles for Better Handling Updates
 -----------------------------------------------------------------*/
 
+:root {
 
+--color1 : #1C914D;
+--color2 : #5fb03a;
+--color3 : #f8ea53;
+--color4 : #e95c0c;
+--color5 : #e11013;
+--color6 : #165aa5;
+--color7 : #B8DAF2;
+
+
+}
+
+
+@media (max-width: 500px){
+
+.fbox-media img{
+
+width: 110PX;
+
+height: auto !important;
+}
+
+}
+.promo-color1 {
+	border: 0 !important;
+	background-color: var(--color3);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	box-shadow: #ffffff5c 0px 52px 98px -17px inset;
+}
+
+.promo-color1 h3 {color: #282828;}
+
+.promo-color1 h3 span {
+	color: red !important;
+}
+
+.promo-color2 {
+	border: 0 !important;
+	background-color: var(--color4);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	box-shadow: #ffffff5c 0px 52px 98px -17px inset;
+}
+
+.promo-color2 h3 {color: #ffffff;}
+
+.promo-color2 h3 span {
+	color: var(--color3) !important;
+}
+
+
+.promo-color3 {
+	border: 0 !important;
+	background-color: var(--color6);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	box-shadow: #ffffff5c 0px 52px 98px -17px inset;
+}
+
+.promo-color3 h3 {color: #ffffff;}
+
+.promo-color3 h3 span {
+	color: var(--color3) !important;
+}
+
+.t-kinder {
+    font-size: 3.2rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0;
+   
+    background: #ffffff91;
+    border-radius: 16px;
+}
