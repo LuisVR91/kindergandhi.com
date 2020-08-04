@@ -13,7 +13,7 @@ body.dark,
 .dark #content,
 #footer.dark,
 .dark .css3-spinner,
-#header.dark.sticky-header.transparent-header #header-wrap:not(.not-dark) { background-color: var(--darkcolor); }
+#header.dark.sticky-header.transparent-header #header-wrap:not(.not-dark) {background-color: var(--darkcolor);}
 
 .slider-element h2 {
 	font-size: 3.2rem;
@@ -100,21 +100,21 @@ body.dark,
 	position: absolute;
 	left: 0;
 	top: 0;
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.1);
 	z-index: 0;
 	-webkit-transition: background-color .3s ease;
 	-o-transition: background-color .3s ease;
 	transition: background-color .3s ease;
 }
 
-.img-hover-wrap:hover .img-hover-card > a::after { background-color: rgba(0, 0, 0, 0.6); }
+.img-hover-wrap:hover .img-hover-card > a::after {background-color: rgb(169 255 0 / 39%);}
 
 .img-hover-card {
 	position: relative;
 	display: block;
 	will-change: transform;
 	transition: all .3s ease;
-	box-shadow: 0 10px 40px transparent;
+	/* box-shadow: 0 10px 40px transparent; */
 }
 
 .img-hover-card a {

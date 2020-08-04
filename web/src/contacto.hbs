@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Kinder Gandhi" />
+
+	<meta name="theme-color" content="#B12A34">
+	<link rel="icon" href="icons/icon-32.png" type="image/png" />
+	<link rel="manifest" href="app.webmanifest">
+
+	{{>template/meta}}
+
+	<!-- Document Title
+	============================================= -->
+	<title>Kinder Gandhi</title>
+
+</head>
+
+
+<!-- Page Loader, stretched (body)
+============================================= -->
+
+<body class="stretched"
+	data-loader-html="<div><img src='demos/photographer/images/icons/loader.svg' alt='Loader'></div>">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header	============================================= -->
+		{{> template/secction/header}}
+		<!-- #header end -->
+
+
+		<!-- Page Title
+		============================================= -->
+		
+	<!-- Page Title
+		============================================= -->
+		<section id="page-title" class="page-title-parallax page-title-light page-title-center" style="background-image: url('./src/img/textura/b.jpg');background-repeat: repeat;background-size: 15em;" data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
+
+			<div class="p-2 container clearfix">
+				<h1>Contácto</h1>
+				<span>Resolveremos todas tus dudas</span>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">kindergandhi.com</a></li>
+				</ol>
+			</div>
+
+		</section><!-- #page-title end -->
+		<!-- #page-title end -->
+
+
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<div class="row gutter-40 col-mb-80">
+						<!-- Postcontent
+						============================================= -->
+						<div class="postcontent col-lg-9">
+
+
+
+
+
+
+							<h3>Envianos un Mail</h3>
+
+							<div class="form-widget">
+
+								<div class="form-result"></div>
+
+								<form class="mb-0" id="template-contactform" name="template-contactform"
+									action="include/sendemailContacto.php" method="post">
+
+									<div class="form-process">
+										<div class="css3-spinner">
+											<div class="css3-spinner-scaler"></div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-4 form-group">
+											<label for="template-contactform-name">Nombre <small>*</small></label>
+											<input type="text" id="template-contactform-name"
+												name="template-contactform-name" value=""
+												class="sm-form-control required" />
+										</div>
+
+										<div class="col-md-4 form-group">
+											<label for="template-contactform-email">Correo <small>*</small></label>
+											<input type="email" id="template-contactform-email"
+												name="template-contactform-email" value=""
+												class="required email sm-form-control" />
+										</div>
+
+										<div class="col-md-4 form-group">
+											<label for="template-contactform-phone">Teléfono</label>
+											<input type="text" id="template-contactform-phone"
+												name="template-contactform-phone" value="" class="sm-form-control" />
+										</div>
+
+										<div class="w-100"></div>
+
+										<div class="col-12 form-group">
+											<label for="template-contactform-message">Mensaje <small>*</small></label>
+											<textarea class="required sm-form-control" id="template-contactform-message"
+												name="template-contactform-message" rows="6" cols="30"></textarea>
+										</div>
+
+										<div class="col-12 form-group d-none">
+											<input type="text" id="template-contactform-botcheck"
+												name="template-contactform-botcheck" value="" class="sm-form-control" />
+										</div>
+
+										<div class="col-12 form-group">
+											<button class="button button-3d m-0" type="submit"
+												id="template-contactform-submit" name="template-contactform-submit"
+												value="submit">Enviar mensaje</button>
+										</div>
+									</div>
+
+									<input type="hidden" name="prefix" value="template-contactform-">
+
+								</form>
+							</div>
+
+
+<div id="faqs" class="faqs">
+
+								<div id="faqs-list" class="fancy-title title-bottom-border">
+									<h3>Preguntas frecuentes</h3>
+								</div>
+
+
+
+
+
+
+
+								<ul class="iconlist faqlist">
+									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-1">¿Cuales son sus horarios?</a></strong></li>
+									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-2">¿Que necesito para inscribir a mis peques?</a></strong></li>
+									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-3">¿Cual es la Validez de estudios?</a></strong></li>
+									<li><i class="icon-caret-right"></i><strong><a href="#" data-scrollto="#faq-4">¿Por qué elegir el Jardín de Niños Gandhi?</a></strong></li>
+									
+								</ul>
+
+								<div class="divider"><i class="icon-circle"></i></div>
+
+								<h3 id="faq-1" class="mb-2"><strong>¿Cuales son sus horarios?</strong></h3>
+								<p>
+
+Nuestro horario escolar es de 8:20 AM a 1:15 PM
+También contamos con nuestro horario extendido de 1:30 a 2:30 PM
+
+ En el horario extendido se imparten los talleres de ballet, hip hop, música, teatro y pintura.
+</p>
+
+								<div class="divider divider-right"><a href="#" data-scrollto="#faqs-list"><i class="icon-chevron-up"></i></a></div>
+
+								<h3 id="faq-2" class="mb-2"><strong>¿Que necesito para inscribir a mis peques?</strong></h3>
+								<p>--</p>
+
+								<div class="divider divider-right"><a href="#" data-scrollto="#faqs-list"><i class="icon-chevron-up"></i></a></div>
+
+								<h3 id="faq-3" class="mb-2"><strong>¿Cual es la Validez de estudios?</strong></h3>
+								<p>
+
+ Validez de estudios es: al finalizar el grado se le entrega un reporte de evaluación expedido por la SEP y al concluir el tercer grado se les entrega un certificado expedido por la SEP para que puedan inscribir a la primaria y su reporte de evaluación también
+
+</p>
+
+								<div class="divider divider-right"><a href="#" data-scrollto="#faqs-list"><i class="icon-chevron-up"></i></a></div>
+
+								<h3 id="faq-4" class="mb-2"><strong>¿Por qué elegir el Jardín de Niños Gandhi?</strong></h3>
+								<p>Somos una Institución comprometida con la formación académica de sus hijos. Traspasamos la barrera de la educación convencional integrando actividades y materias que apoyan al proyecto de vida de los niños en edad preescolar. Contamos con el apoyo de programas que involucran a los padres de familia, siempre con un trabajo en equipo que permita fortalecer las bases del amor, la fraternidad y el compromiso de ser mejores en nuestra vida diaria.</p>
+
+							</div>
+						
+						
+						</div><!-- .postcontent end -->
+
+
+
+						<!-- Sidebar
+						============================================= -->
+						<div class="sidebar col-lg-3">
+
+							<address>
+								<strong>Dirección:</strong><br>
+								Tunal Mz.26 Lt. 2 Col. Tablas del Pozo
+								55510 Ecatepec de Morelos, Estado de México, México
+								<a social-link="maps"><img src="./core/google@1.png" alt=""></a>
+							</address>
+
+
+							<a social-link="phone"><abbr title="Teléfono"><strong>Teléfono:</strong></abbr>55694417</a><br>
+							<a social-link="whatsapp"><abbr title="Whatsapp"><strong>Whatsapp:</strong></abbr>
+								5572720800</a> <br>
+							<abbr title="Email"><strong>Email:</strong></abbr> direccion@kindergandhi.com
+
+							<div class="widget border-0 pt-0">
+
+								<div class="fb-page" data-href="https://www.facebook.com/jngandhitp/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jngandhitp/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jngandhitp/">Central de Picas</a></blockquote></div>
+
+							</div>
+
+							
+
+						</div><!-- .sidebar end -->
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+
+
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+
+		{{> template/secction/footer }}
+
+		<!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up bg-color"></div>
+
+	<!-- Dark Mode Switch
+	============================================= -->
+	<a href="app/index.html" class="dark-mode" data-animate="fadeInRight">
+		<span>Tarea</span><i class="icon-book2 shadow "></i>
+	</a>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+
+	<!-- <script src="js/plugins.min.js"></script> -->
+
+	<script src="js/plugins.easing.js"></script>
+	<!-- <script src="js/plugins.bootstrap.js"></script> -->
+
+	<script>window.scwJsPath = './js';</script>
+
+	<!-- Photograph Hover Plugin
+	============================================= -->
+	{{!-- <script src="demos/writer/js/hover3d.js"></script> --}}
+
+	<!-- Menu Open Plugin
+	============================================= -->
+	<script src="demos/photographer/js/menu-easing.js"></script>
+
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=163593367646006&autoLogAppEvents=1"></script>
+</body>
+
+</html>

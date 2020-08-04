@@ -116,7 +116,7 @@ input.switch-toggle-flat:checked + label:after,
 .dark #gotoTop:hover,
 .dark input.switch-toggle-round:checked + label::before,
 .dark input.switch-toggle-flat:checked + label,
-.dark input.switch-toggle-flat:checked + label::after { background-color: var(--custom1); }
+.dark input.switch-toggle-flat:checked + label::after {background-color: var(--custom1);}
 
 .bg-color,
 .bg-color #header-wrap,

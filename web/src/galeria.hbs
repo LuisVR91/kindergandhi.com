@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Kinder Gandhi" />
+
+	<meta name="theme-color" content="#B12A34">
+	<link rel="icon" href="icons/icon-32.png" type="image/png" />
+	<link rel="manifest" href="app.webmanifest">
+
+	{{>template/meta}}
+
+	<!-- Document Title
+	============================================= -->
+	<title>Kinder Gandhi</title>
+
+</head>
+
+
+<!-- Page Loader, stretched (body)
+============================================= -->
+
+<body class="stretched"
+	data-loader-html="<div><img src='demos/photographer/images/icons/loader.svg' alt='Loader'></div>">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header	============================================= -->
+		{{> template/secction/header}}
+		<!-- #header end -->
+
+
+		<!-- Page Title
+		============================================= -->
+
+		<!-- Page Title
+		============================================= -->
+		<section id="page-title" class="page-title-parallax page-title-light page-title-center"
+			style="background-image: url('./src/img/textura/b.jpg');background-repeat: repeat;background-size: 15em;"
+			data-bottom-top="background-position:0px 0px;" data-top-bottom="background-position:0px -300px;">
+
+			<div class="p-2 container clearfix">
+				<h1>Galería</h1>
+				<span>CONOCE NUESTRAS INSTALACIONES <br>
+
+					Excelentes áreas adecuadas para la educacion, comodidad, seguridad y diversión para tus
+					hijos.</span>
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">kindergandhi.com</a></li>
+				</ol>
+			</div>
+
+		</section><!-- #page-title end -->
+		<!-- #page-title end -->
+
+
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div id="galeria" class="p-0 section bg-transparent">
+
+
+				<div gallery-img="21" class="masonry-thumbs grid-container grid-4" data-big="4" data-lightbox="gallery">
+
+				</div>
+
+
+			</div>
+
+		<a class="button button-full center text-right topmargin-lg " style="background-color: var(--color6);margin-top:  0 !important;" href="tel://55694417">
+				<div class="container clearfix">
+
+					¿Necesitas más información? <strong>llámanos</strong> <i class="icon-phone" style="top:4px;"></i>
+				</div>
+			</a>
+		</section><!-- #content end -->
+
+
+		<!-- Footer
+		============================================= -->
+
+		{{> template/secction/footer }}
+
+		<!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up bg-color"></div>
+
+	<!-- Dark Mode Switch
+	============================================= -->
+	<a href="app/index.html" class="dark-mode" data-animate="fadeInRight">
+		<span>Tarea</span><i class="icon-book2 shadow "></i>
+	</a>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+
+	<!-- <script src="js/plugins.min.js"></script> -->
+
+	<script src="js/plugins.easing.js"></script>
+	<!-- <script src="js/plugins.bootstrap.js"></script> -->
+
+	<script>window.scwJsPath = './js';</script>
+
+	<!-- Photograph Hover Plugin
+	============================================= -->
+	{{!-- <script src="demos/writer/js/hover3d.js"></script> --}}
+
+	<!-- Menu Open Plugin
+	============================================= -->
+	<script src="demos/photographer/js/menu-easing.js"></script>
+
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+
+
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous"
+		src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2&appId=163593367646006&autoLogAppEvents=1"></script>
+</body>
+
+</html>

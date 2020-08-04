@@ -45,7 +45,7 @@
 	transform: translateY(-100%) rotate(-10deg);
 }
 
-.global-menu__item:hover { color: var(--theme-bg); }
+.global-menu__item:hover {color: powderblue;}
 
 .global-menu__item.is-opened {
 	opacity: 1;

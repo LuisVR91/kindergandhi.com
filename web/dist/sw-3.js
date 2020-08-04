@@ -5,12 +5,13 @@ En offline manda a una pagia de "offline.htm" si la pagina no esta en cache */
 const CACHE = "pwabuilder-adv-cache";
 const precacheFiles = [
   /* Add an array of files to precache for your app */
-  'offline.html',
-  'https://statics.memondo.com/p/s1/crs/2019/08/CR_1110839_ebd6fb086a584c3b8f9eb0b8cec946d9_que_cuanto_tiempo_llevo_sin_internet_thumb_fb.jpg?cb=5364986'
+  './',
+  './core/offline/offline.html',
+  './core/offline/offline.gif'
 ];
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "offline.html";
+const offlineFallbackPage = "./core/offline/offline.html";
 
 const networkFirstPaths = [
  'https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$'
@@ -66,9 +67,9 @@ self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") return;
 
   if (comparePaths(event.request.url, networkFirstPaths)) {
-    networkFirstFetch(event);
-  } else {
-    cacheFirstFetch(event);
+      cacheFirstFetch(event);
+    } else {
+        networkFirstFetch(event);
   }
 });
 
@@ -135,19 +136,40 @@ function fromCache(request) {
     // If not in the cache, then return the offline page
     return caches.open(CACHE).then(function (cache) {
       return cache.match(request).then(function (matching) {
+
         if (!matching || matching.status === 404) {
+
+            console.log("!matching || matching.status === 404")
           // The following validates that the request was for a navigation to a new document
           if (request.destination !== "document" || request.mode !== "navigate") {
-            return Promise.reject("no-match");
+              console.log('no-match')
+              return Promise.reject("no-match");
+        }else{
+            console.log("offlineFallbackPage")
+            return cache.match(offlineFallbackPage);
+            // return Promise.reject("no-match");
+            
           }
   
-          return cache.match(offlineFallbackPage);
         }
-  
+        console.log("matching")
+
         return matching;
+      });
+
+
+    });
+  }
+
+
+/*   function fromCache(request) {
+    return caches.open(CACHE).then(function (cache) {
+      return cache.match(request).then(function (matching) {
+        return matching || Promise.reject('no-match');
       });
     });
   }
+ */
 
 function updateCache(request, response) {
   if (!comparePaths(request.url, avoidCachingPaths)) {
@@ -159,8 +181,6 @@ function updateCache(request, response) {
   return Promise.resolve();
 }
 
-
-// ultimos
 
 
 // This is an event that can be fired from your page to tell the SW to update the offline page

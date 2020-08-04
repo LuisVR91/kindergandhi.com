@@ -10,7 +10,7 @@
 .dark h4,
 .dark h5,
 .dark h6 {
-	color: #EEE;
+	color: #fff;
 }
 
 .dark a:not([class*="btn-"]):hover {
@@ -997,7 +997,7 @@ body #side-panel.dark {
 }
 
 .dark .social-icon {
-	color: #EEE;
+	color: #000;
 	border-color: #AAA;
 }
 
@@ -1458,7 +1458,7 @@ body #side-panel.dark {
 .dark #footer,
 #footer.dark {
 	color: rgba(255,255,255,0.75);
-	background-color: #282828;
+	/* background-color: #282828; */
 	border-top-color: rgba(255,255,255,0.15);
 }
 
@@ -1472,13 +1472,12 @@ body #side-panel.dark {
 
 .dark #footer .social-icon.si-borderless,
 #footer.dark .social-icon.si-borderless {
-	color: rgba(255,255,255,0.5) !important;
+	color: rgb(0 0 0 / 60%) !important;
 }
 
 .dark #copyrights,
 #copyrights.dark {
-	color: rgba(255,255,255,0.4);
-	background-color: rgba(0,0,0,0.2);
+	color: rgb(0 0 0 / 74%);
 }
 
 .dark .copyright-links a {

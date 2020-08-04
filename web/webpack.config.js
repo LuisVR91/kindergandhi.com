@@ -59,6 +59,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './src/index.hbs',
+           
             minify: {
                 html5: true,
                 collapseWhitespace: false,
@@ -72,6 +73,16 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'contacto.html',
             template: './src/contacto.hbs',
+            minify: {
+                html5: true,
+                collapseWhitespace: false,
+                caseSensitive: false,
+                removeComments: false,
+                removeEmptyElements: false
+            }
+        }),    new HtmlWebpackPlugin({
+            filename: 'galeria.html',
+            template: './src/galeria.hbs',
             minify: {
                 html5: true,
                 collapseWhitespace: false,
