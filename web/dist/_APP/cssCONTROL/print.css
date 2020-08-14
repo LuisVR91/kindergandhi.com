@@ -1,0 +1,65 @@
+#conttenedorImprimir{background: NONE !important;TEXT-ALIGN: CENTER;PADDING: 0cm 2cm 1cm 2cm;}
+
+#cuerpo{
+	height: 19.59cm !important;
+	width: 25.94cm !important;
+	/* background:none !important; */
+	/* border: solid 1px #E4E4E4; */
+	background: url(derecha.png)  no-repeat 100% 100% , url(izquierda.png)  no-repeat 0% 0% !important;
+}
+
+.printh1{
+    font-weight: bold;
+    color: black;
+    font-size: 26pt;
+    display: block;
+    letter-spacing: .3em;
+    padding: 0px;
+    font-family: Copperplate Gothic !important;
+}
+.printh2{
+    font-family: Copperplate Gothic !important;
+    font-weight: 600;
+    color: black;
+    font-size: 11pt;
+    display: block;
+    /* letter-spacing: .3em; */
+    margin: 31px 1px;
+    /* text-transform: uppercase !important; */
+}
+.printh3{
+    font-family: Copperplate Gothic !important;
+    font-weight: bold;
+    color: black;
+    font-size: 36pt;
+    display: block;
+    letter-spacing: .3em;
+    margin: 31px 1px;
+    text-transform: uppercase !important;
+}
+.printh4{
+    font-family: Copperplate Gothic !important;
+    font-weight: bold;
+    color: black;
+    font-size: 11pt;
+    display: block;
+    /* letter-spacing: .3em; */
+    margin: 31px 1px;
+    line-height: .9cm;
+    text-transform: uppercase !important;
+}
+.printh5{
+    font-family: Copperplate Gothic !important;
+    font-weight: 700;
+    color: black;
+    font-size: 11pt;
+    display: block;
+    /* letter-spacing: .3em; */
+    margin: 31px 1px;
+    line-height: 1.5em;
+    text-transform: uppercase !important;
+}
+
+.printh6{
+	    height: 4cm; !important
+ }

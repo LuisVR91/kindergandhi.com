@@ -1,0 +1,126 @@
+.gray-l{
+    background: gainsboro;
+    padding: 0px 3px;
+    border-radius: 3px;
+    transition: .4s all;
+    margin: 0px 3px;
+}
+
+.gray-l:hover{
+    background: #7D7D7D;
+    color: white;
+    transition: .4s all;
+}
+
+.gray{
+    background: #636363;
+    padding: 0px 3px;
+    border-radius: 3px;
+    transition: .4s all;
+    color: white;
+    margin: 0px 3px;
+}
+
+.gray:hover{
+    background: #7D7D7D;
+    color: white;
+    transition: .4s all;
+}
+
+[dell="div"]{
+    cursor: pointer;
+    background: #696969;
+    padding: 3px 11px;
+    color: white;
+    border-radius: 3px;
+}
+
+[dell="div"]:hover{
+    cursor: pointer;
+    background: #333333;
+    padding: 3px 11px;
+    color: white;
+    border-radius: 3px;
+    transition: .4s all;
+}
+
+[link]{
+	cursor: pointer;
+}
+#text-brand{
+	    padding-top: 27px;
+    padding-bottom: 27px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    border-bottom: solid 1px;
+    font-size: 26px;
+}
+
+.bg-blue1{
+background-color: #0164B0 !important;
+color: white;background-image: none !important;
+}
+
+.bg-blue2{
+background-color: rgba(1, 100, 176, 0.729412) !important;
+color: white !important;
+background-image: none !important;
+}
+
+.c-white{
+	color:white !important;
+}
+
+.c-blue{
+	color: #005DA5 !important;
+}
+
+/* mini perfiles */
+
+
+
+.placa-perfil{
+    margin: 0px -10px;
+    height: 39px;
+    font-size: 25px;
+    background: #333333;
+    text-align: center;
+    line-height: 1.5em;
+    color: white;
+    padding-left: 55px;
+    position: relative;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.h-perfil {margin: 0px -10px;height: 44px;font-size: 25px;/* background: #005DA5; *//* text-align: center; */line-height: 46px;color: white;padding-left: 63px;position: relative;border-radius: 5px 5px 0px 0px;}
+
+.h-perfil i{
+     padding: 7px 13px;
+     position: absolute;
+     left: 0px;
+     border-radius: 5px 0px 0px 0px;
+     background: #0164B0;
+     box-shadow: 2px 0px 1px 0px rgba(0, 0, 0, 0.36);
+     font-size: 30px;
+}
+.h-perfil span{
+    font-size: 31px;
+    padding: 0px;
+    background: none;
+    color: white;
+    /* margin: auto; */
+    /* font-size: 25px; */
+}
+
+.min-perfil{
+    overflow: auto;
+    height: 206px;
+    background: rgb(255, 255, 255);
+    border: solid 1px rgba(206, 206, 206, 0.43);
+    padding: 0px 10px;
+    border-radius: 5px 5px 5px 5px;
+    /* border-top: none; */
+    margin-bottom: 20px;
+}
+

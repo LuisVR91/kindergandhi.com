@@ -1,0 +1,30 @@
+CREATE TABLE IF NOT EXISTS `sliders` (
+  `idSlider` INT NOT NULL AUTO_INCREMENT,
+  `titulo` VARCHAR(500) NULL,
+  `ubicacion` VARCHAR(200) NULL,
+  PRIMARY KEY (`idSlider`))
+ENGINE = InnoDB;
+
+
+
+CREATE TABLE IF NOT EXISTS `sli_arc` (
+  `idSlider` INT NULL,
+  `idSliArc` INT NOT NULL AUTO_INCREMENT,
+  `idArchivo` INT NULL,
+  `titulo` VARCHAR(200) NULL,
+  `descripcion` VARCHAR(200) NULL,
+  `tipo` VARCHAR(45) NULL,
+  `urlTitulo` VARCHAR(45) NULL,
+  `url` VARCHAR(200) NULL,
+  PRIMARY KEY (`idSliArc`),
+  CONSTRAINT `sli_arc_idSlider`
+    FOREIGN KEY (`idSlider`)
+    REFERENCES `sliders` (`idSlider`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `sli_arc_idArchivo`
+    FOREIGN KEY (`idArchivo`)
+    REFERENCES `archivos` (`idArchivo`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = InnoDB;

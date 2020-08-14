@@ -91,6 +91,17 @@ module.exports = {
                 removeEmptyElements: false
             }
         }),
+        new HtmlWebpackPlugin({
+            filename: 'login.html',
+            template: './src/login.hbs',
+            minify: {
+                html5: true,
+                collapseWhitespace: false,
+                caseSensitive: false,
+                removeComments: false,
+                removeEmptyElements: false
+            }
+        }),
         new MiniCssExtractPlugin({
             filename: "core/src/css/[name]-styles.css",
             chunkFilename: "[id].css"
