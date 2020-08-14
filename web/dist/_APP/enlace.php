@@ -6,9 +6,9 @@
 
 
 $host              = ($_SERVER["SERVER_NAME"]=='localhost' )? 'localhost' : 'localhost';
-$user              = 'inter203_gandhi';
+$user              = 'proye186_gandhi';
 $passw             = '789123654oO$';
-$db                = 'inter203_gandhi';
+$db                = 'proye186_gandhi';
 $GLOBALS["enlace"] = mysqli_connect($host, $user, $passw, $db) or die('Error al intentar conectarse a la base de datos.');
 
 mysqli_set_charset($GLOBALS["enlace"], "utf8");
