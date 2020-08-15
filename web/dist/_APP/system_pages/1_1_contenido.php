@@ -94,10 +94,11 @@ EOT;
  <!-- Start Post -->
             <div class="blog-post gallery-post" style="
     background: #fcfcfc;
-    border: solid 11px #4466a8;
+    border: solid 11px #1C914D;
     padding: 11px 3px;
-    border-left: solid 1px #4466a8;
-    border-right: solid 1px #4466a8;
+    border-left: solid 1px #1C914D;
+    border-right: solid 1px #1C914D;
+    border-radius: 3px;
 ">
 
 <!-- Post Gallery -->
@@ -159,12 +160,13 @@ while($archivo= mysqli_fetch_array($resultArchivos, MYSQLI_ASSOC)){
               </div>
 
 <ul class="icons-list" style="
-    border-radius: 9px;
-    background: #ffffff;
-    border: solid 4px #4466a8;
+    border-radius: 1px;
+    border: solid 4px #1C914D;
     padding: 3px 3px;
-    border-left: solid 1px #4466a8;
-    border-right: solid 1px #4466a8;
+    border-left: solid 1px #1C914D;
+    border-right: solid 1px #1C914D;
+    background: #1C914D;
+    color: white;
     ">
 
 <?PHP 
@@ -225,11 +227,11 @@ while($imagen= mysqli_fetch_array($resultimagen, MYSQLI_ASSOC)){ ?>
 
 
 
-<span link="mod1" mdl="modalSolicitud" action="modalSolicitudIMG" cde="1_1_php_modal"
+<div link="mod1" mdl="modalSolicitud" action="modalSolicitudIMG" cde="1_1_php_modal"
 value="<?php echo $imagen['idArchivo']; ?>" class="gray-l">
 <i class="fa fa-picture-o"></i>
 <?PHP echo "Imagen $conteo" ?>
-</span>
+</div>
 
 <?php 
 $conteo++;

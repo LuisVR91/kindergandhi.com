@@ -11,8 +11,8 @@ mod_addEnd_Select2();
 
 
 
-$("textarea").off('hover',areglodeatuo);
-$("textarea").hover(areglodeatuo);
+// $("textarea").off('hover',areglodeatuo);
+// $("textarea").hover(areglodeatuo);
 
 
 

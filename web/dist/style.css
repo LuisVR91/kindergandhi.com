@@ -5968,7 +5968,7 @@ body:not(.has-plugin-html5video) .video-wrap video {
 
 #page-title .container {
 	position: relative;
-	background: #ffffff8f;
+	background: #ffffffbd;
 	border-radius: 22px;
 }
 
@@ -5986,7 +5986,7 @@ body:not(.has-plugin-html5video) .video-wrap video {
 #page-title span {
 	display: block;
 	margin-top: 10px;
-	font-weight: 300;
+	font-weight: 500;
 	color: #6c6c6c;
 	font-size: 18px;
 }

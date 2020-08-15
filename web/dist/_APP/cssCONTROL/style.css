@@ -46,7 +46,10 @@ body {
 	line-height: 21px;
 	font-weight: 300;
 	color: #595959;
-	background: url('../images/b_header.png');
+	font-family: 'Poppins', sans-serif !important;
+	background-image: url(../../src/img/textura/b.jpg);
+	background-repeat: repeat;
+	background-size: 26em;
 }
 strong, b {
 	font-weight: 600;
@@ -90,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 	margin: 0;
 	color: #444;
+	font-family: 'Poppins', sans-serif !important;
 }
 
 h1 {
@@ -113,8 +117,9 @@ h4 {
 }
 
 h5 {
-    font-size: 14px;
-	line-height: 20px;
+    font-size: 3.3rem;
+    line-height: 20px;
+    margin-bottom: 14px;
 }
 
 h6 {
@@ -129,6 +134,7 @@ p {
     line-height: 22px;
     margin: 0;
     word-wrap: break-word;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 p strong {
@@ -289,7 +295,7 @@ input[type="submit"] {
 }
 
 #container {
-    background-color: #fff;
+    background-color: #ffffffeb;
     min-height: 100vh;
 }
 
@@ -400,7 +406,7 @@ header {
 }
 
 .top-bar {
-	background-color: #42a581;
+	background-color: #1C914D;
 	border-bottom: 1px solid #565656;
 }
 
@@ -574,7 +580,7 @@ ul.social-list li:last-child a i {
 }
 .navbar {
 	margin-bottom: 0;
-	background: #ffe422;
+	background: #F8EA53;
 	/* border: none; */
 	border-radius: 0;
 	-webkit-border-radius: 0;
@@ -1298,7 +1304,6 @@ input[type="submit"] {
 /*************** Call To Action ***************/
 
 .call-action-boxed {
-	padding: 11px 33px;
 }
 
 .call-action.no-descripton h2.primary {
@@ -1315,7 +1320,7 @@ input[type="submit"] {
 
 .call-action p {
 	font-size: 14px;
-	margin-bottom: 0;
+	margin: 6px 0px;
 }
 
 .call-action h2 + p {
@@ -1336,7 +1341,12 @@ input[type="submit"] {
 }
 
 .call-action-style2 {
-	background: #f2f2f2;
+	background: #f8ea53;
+	border-radius: 7px;
+	position: relative;
+	margin: 5px 0;
+	border-radius: 3px !important;
+	padding: 2.2rem 3rem !important;
 }
 
 .call-action-style3 {
@@ -1777,12 +1787,10 @@ input[type="submit"] {
 	-o-border-radius: 3px;
 	transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
-	-webkit-transition: all 0.3s ease-in-out;
+	/* -webkit-transition: all 0.3s ease-in-out; */
 	-o-transition: all 0.3s ease-in-out;
-	box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
 	-o-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
 	-moz-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
-	-webkit-box-shadow: 0 4px 0 rgba(0,0,0,0.1) inset;
 	border:0;
 	text-transform: uppercase;
 	font-weight: 500;

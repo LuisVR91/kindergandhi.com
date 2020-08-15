@@ -28,22 +28,34 @@ if($_SESSION['idControl']==1){
   ?>
 
 <div class="row">
-<div class="call-action call-action-boxed call-action-style2 clearfix">
+<div class="col-sm-12">
+  <div class="call-action call-action-boxed call-action-style2 clearfix">
+<div class="row">
+  <div class="col-sm-12">
+  <h5 class="primary">Hola <?php echo "$_SESSION[nombre]"; ?></h5>
 
-<h5 class="primary">Hola <?php echo "$_SESSION[nombre]"; ?></h5>
-<p>
-<small>
-Pulsa el siguiente boton para registrar una nueva actividad.
-</small>
-</p>
+</div>    
+<div class="col-sm-12">
+  
+      <p>
+      
+      Pulsa el siguiente boton para registrar una nueva actividad.
+      <br>
 
 
-<div class="hr2" style="margin-top:5px; margin-bottom:3px;"></div>
-
-<div link="mod1" mdl="articulosModal" action="modalFormArticulos" cde="1_1_php_modal" value="0" class="btn-system btn-large pull-left ">
-Registrar actividad
 </div>
+<div class="col-sm-12">
+  
+  <div link="mod1" mdl="articulosModal" action="modalFormArticulos" cde="1_1_php_modal" value="0" class="btn-system btn-large pull-left ">
+  <span>Registrar actividad</span>
+  </div>
 
+</div>
+    
+    
+</div>
+  
+  </div>
 </div>
 </div>
 

@@ -262,9 +262,15 @@ data-date-format='d-m-Y' value="<?PHP echo $fecha; ?>">
 
 <div class="form-group ">
 <label>Descripcion:</label>
-<textarea class="form-control" name="descripcion" ><?php echo textr($actividad['descripcion']); ?></textarea>
-</div>
 
+<?PHP 
+
+$rows = strlen($actividad['descripcion'])/90;
+
+?>
+
+<textarea class="form-control"  <?php  echo "rows='$rows'" ?> name="descripcion" ><?php echo textr($actividad['descripcion']); ?></textarea>
+</div>
 
 
 <div class="row">
