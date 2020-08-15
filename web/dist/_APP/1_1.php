@@ -102,7 +102,7 @@ if($_SESSION['idControl']!=1){
 }
 ?>
 
-  <select  seleccion='mod1' cde='1_1_php' result='categorias2' action='option-categorias2'
+  <select  
   name="idGrupo" class="form-control " style="width: 100%;" required>
  
   <?php
@@ -152,13 +152,14 @@ if($_SESSION['idControl']!=1){
   
 
   <div class="form-group">
-  
+
 <label>Fecha</label>
-<select  seleccion='mod1' action="rango" cde="1_1_PHP" result="rango" name="rango" class="form-control " style="width: 100%;" required>
+<select  seleccion='mod1' action="rango" cde="1_1_php" result="rango" name="rango" class="form-control " style="width: 100%;" required>
 <option value="mes">Mes Actual</option>
 <option value="espesificar">Especificar fecha</option>
 </select>
 </div>  
+<input type="hidden" name="idControl" value="<?PHP echo $_SESSION['idControl']; ?>">
 
 <div respuesta="rango" >
 <input type="hidden" name="fecha" value="mes">
@@ -191,7 +192,7 @@ $grupo = $_SESSION['idGrupo'];
 }else{
   $grupo = "%";
 }
-echo articulosList($grupo,"%","mes");
+echo articulosList($grupo,"%","mes", $_SESSION['idControl']);
 
 ?>
 

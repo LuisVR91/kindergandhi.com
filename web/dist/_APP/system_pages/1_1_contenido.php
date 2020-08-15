@@ -1,16 +1,18 @@
-
 <?php
-if($_SESSION['login_tkm']=='false'){
 session_start();
  
-}
-include_once('enlace.php');
+// mb_internal_encoding("UTF-8");
 
-
-
+include_once('../system_codes_php/enlace.php');
 date_default_timezone_set('America/Mexico_City');
+?>
 
-function articulosList($idGrupo,$idActividad, $fecha){
+
+<?php
+
+
+
+function articulosList($idGrupo,$idActividad, $fecha, $idControl){
 
 
 // recuperando fecha
@@ -170,7 +172,7 @@ while($archivo= mysqli_fetch_array($resultArchivos, MYSQLI_ASSOC)){
     ">
 
 <?PHP 
-if($_SESSION['idControl']==1){
+if($idControl==1){
   ?>
 
 <li>
@@ -186,11 +188,13 @@ Editar Información
 
 
 <li>
-<strong>Imagenes:</strong>
+<strong>Imagenes:
+<?PHP echo $idControl; ?>
+</strong>
 <br>
 
 <?PHP 
-if($_SESSION['idControl']==1){
+if($idControl==1){
   ?>
 
 <span link="mod1" mdl="modalSolicitud" action="modalAgregarIMG"

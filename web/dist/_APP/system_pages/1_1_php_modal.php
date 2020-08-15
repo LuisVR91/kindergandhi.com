@@ -29,7 +29,7 @@ if($_REQUEST['action']=='modalFormArticulos'){ ?>
       <div class="modal-body">
 
 <input type="hidden" name='action' value="add-actividad">
-
+<input type="hidden" name="idControl" value="<?php echo $_SESSION['idControl']; ?>" >
 <input type="hidden" name="tipo" value="imagen">
 
 <div class="form-group">
@@ -176,7 +176,7 @@ $fecha= date_format(date_create($actividad['fecha']), 'd-m-Y');
 
 <input type="hidden" name='action' value="edit-actividad">
 <input type="hidden" name='idActividad' value="<?php echo $actividad['idActividad']; ?>">
-
+<input type="hidden" name="idControl" value="<?php echo $_SESSION['idControl']; ?>" >
 
 
 
@@ -321,7 +321,7 @@ if($_REQUEST['action']=='modalAgregarIMG'){
 <input type="hidden" name="action" value="add-Archivo">
 <input type="hidden" name="tipo" value="imagen">
 <input type="hidden" name="idActividad" value="<?php echo $_REQUEST['valor']; ?>" >
-
+<input type="hidden" name="idControl" value="<?php echo $_SESSION['idControl']; ?>" >
 
 <div class="form-group">
 <label>Agregar imagen:</label>
@@ -432,6 +432,7 @@ $imagen= mysqli_fetch_array($resultimagen, MYSQLI_ASSOC);
 <input type="hidden" name="action" value="edit-Archivo">
 <input type="hidden" name="idArchivo" value="<?php echo $imagen['idArchivo']; ?>" >
 <input type="hidden" name="idActividad" value="<?php echo $imagen['idActividad']; ?>" >
+<input type="hidden" name="idControl" value="<?php echo $_SESSION['idControl']; ?>" >
 
 
 <?PHP 

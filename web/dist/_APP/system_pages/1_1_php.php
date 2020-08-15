@@ -49,10 +49,8 @@ data-date-format='d-m-Y' value="<?PHP echo DATE("d/m/Y"); ?>">
 
 }
 
-
-
-
 ?>
+
 <?PHP if($_REQUEST['action']=='edit-actividad'){
 
 
@@ -99,7 +97,7 @@ include_once("1_1_contenido.php");
 
 
 $producto=$_REQUEST['idActividad'];
-articulosList("%",$producto,"%");
+articulosList("%",$producto,"%", $_REQUEST['idControl']);
 }
 
 
@@ -236,7 +234,7 @@ include_once("1_1_contenido.php");
 
 echo "<div class='col-sm-6'  respuesta='art$idActividad'>";
 
-articulosList("%",$idActividad,"%");
+articulosList("%",$idActividad,"%", $_REQUEST['idControl']);
 
 echo "</div>";
 
@@ -249,10 +247,10 @@ include_once("1_1_contenido.php");
 
 
 
-
+// echo "el control es ".$_REQUEST['idControl'];
 // $_REQUEST['titulo']=($_REQUEST['titulo']=="")? "%" : $_REQUEST['titulo'];
 
-articulosList($_REQUEST['idGrupo'], "%", $_REQUEST['fecha']);
+articulosList($_REQUEST['idGrupo'], "%", $_REQUEST['fecha'], $_REQUEST['idControl']);
 
 
 }
@@ -339,7 +337,7 @@ include_once("1_1_contenido.php");
 
 
 $idActividad=$_REQUEST['idActividad'];
-articulosList("%",$idActividad,"%","%");
+articulosList("%",$idActividad,"%",$_REQUEST['idControl']);
 }
 
 
@@ -398,7 +396,7 @@ include_once("1_1_contenido.php");
 
 
 $idActividad=$_REQUEST['idActividad'];
-articulosList("%",$idActividad,"%","%");
+articulosList("%",$idActividad,"%",$_REQUEST['idControl']);
 }
 
 
@@ -489,11 +487,9 @@ include_once("1_1_contenido.php");
 
 
 $idActividad=$_REQUEST['idActividad'];
-articulosList("%",$idActividad,"%");
-
+articulosList("%",$idActividad,"%", $_REQUEST['idControl']);
 
 }
-
 
 if($_REQUEST['action']=='edit-video'){
 
@@ -565,7 +561,7 @@ include_once("1_1_contenido.php");
 
 
 $idActividad=$_REQUEST['idActividad'];
-articulosList("%",$idActividad,"%");
+articulosList("%",$idActividad,"%", $_REQUEST['idControl']);
 
 
 }
