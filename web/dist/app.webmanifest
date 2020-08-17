@@ -1,7 +1,7 @@
 {
-    "name": "Beauty Place",
-    "short_name": "BeautyP",
-    "description": "Progressive Web App that lists games submitted to the A-Frame category in the js13kGames 2017 competition.",
+    "name": "Kinder Gandhi",
+    "short_name": "Gandhi",
+    "description": "kindergandhi.com.mx",
     "icons": [
         {
             "src": "icons/icon-32.png",
