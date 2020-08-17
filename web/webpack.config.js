@@ -92,8 +92,8 @@ module.exports = {
             }
         }),
         new HtmlWebpackPlugin({
-            filename: 'login.html',
-            template: './src/login.hbs',
+            filename: 'conocenos.html',
+            template: './src/conocenos.hbs',
             minify: {
                 html5: true,
                 collapseWhitespace: false,

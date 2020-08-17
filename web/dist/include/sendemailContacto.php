@@ -14,7 +14,7 @@ $toemails = array();
 $toemails[] = array(
 	// 'email' => 'interdual.control@gmail.com', // Your Email Address
 
-'email' => 'direccion@kindergandhi.com', // Your Email Address
+'email' => 'direccion@kindergandhi.com.mx', // Your Email Address
 'name' => utf8_decode('Kinder Gandhi') // Your Name
 );
 
@@ -50,7 +50,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 		if( $botcheck == '' ) {
 
-			$mail->SetFrom( "direccion@kindergandhi.com" , utf8_decode("WEB") );
+			$mail->SetFrom( "direccion@kindergandhi.com.mx" , utf8_decode("WEB") );
 			$mail->AddReplyTo( $email , $name );
 			foreach( $toemails as $toemail ) {
 				$mail->AddAddress( $toemail['email'] , $toemail['name'] );
@@ -63,7 +63,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 			$phone = isset($phone) ? "Contacto: $phone<br>" : '';
 			$message = isset($message) ? "Mensaje: $message" : '';
 
-			$referrer = "Enviado desde kindergandhi.com";
+			$referrer = "Enviado desde kindergandhi.com.mx";
 
 			$body = "$name $email $phone $message <br>  $referrer";
 

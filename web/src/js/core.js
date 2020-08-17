@@ -120,8 +120,14 @@ CORE.social.socialLink();
           case "phone":
             // console.log('hay uno de whatsapp');
             social.removeAttribute("social-link");
-            social.setAttribute("href", "tel://55694417");
+            social.setAttribute("href", "tel://5555694417");
             break;
+
+            case "phone-whatsapp":
+              // console.log('hay uno de whatsapp');
+              social.removeAttribute("social-link");
+              social.setAttribute("href", "tel://5572720800");
+              break;
 
           default:
             console.log("error social");
