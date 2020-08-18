@@ -1,9 +1,10 @@
 <?php
-session_start();
- 
+if($_SESSION['login_tkm']=='false'){
+  session_start();
+}
 // mb_internal_encoding("UTF-8");
 
-include_once('../system_codes_php/enlace.php');
+include_once('enlace.php');
 date_default_timezone_set('America/Mexico_City');
 ?>
 

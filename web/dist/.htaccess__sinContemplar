@@ -1,9 +1,0 @@
-#force SSL by HostPapa
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-#forsar a /
-RewriteCond %{THE_REQUEST} ^.*/index\.html 
-RewriteRule ^(.*)index.html$ /$1 [R=301,L]
-
