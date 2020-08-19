@@ -315,8 +315,11 @@ function text($texto){
 
      function textr($texto){
     $texto=str_replace(" <br> ","\n",$texto);
+    $texto=str_replace("<br>","\n",$texto);
      echo  $texto;
      }
+
+
        function textb($texto){
     $texto=str_replace(" <br> ","",$texto);
      echo  $texto;

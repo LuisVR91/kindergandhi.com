@@ -192,7 +192,24 @@ $grupo = $_SESSION['idGrupo'];
 }else{
   $grupo = "%";
 }
-echo articulosList($grupo,"%","mes", $_SESSION['idControl']);
+
+
+if(isset($_REQUEST['actividad'])){
+  $actividad = $_REQUEST['actividad'];
+  ?>
+  
+  <div class="col-sm-6 col-md-offset-3" respuesta="art<?PHP echo $actividad; ?>">
+  <?PHP
+  echo articulosList($grupo,$actividad,"mes", $_SESSION['idControl']);
+?>
+</div>
+
+<?PHP
+}else{
+  $actividad = "%";
+  echo articulosList($grupo,$actividad,"mes", $_SESSION['idControl']);
+}
+
 
 ?>
 

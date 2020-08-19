@@ -8,12 +8,12 @@ require('system_codes_php/enlace.php');
 
 // session_set_cookie_params(10);
 
+
 include_once('system_codes_php/functions.php');
+// echo "hola despeus de funcion";
 
 
 
-if(!isset($_REQUEST['option'])){ $_REQUEST['option']=1; }
-if(!isset($_REQUEST['mod'])){ $_REQUEST['mod']=1; }
 
 if(!isset($_SESSION['login_tkm'])){ $_SESSION['login_tkm']='false'; }
 if(!isset($_SESSION['autentificacion_tkm'])){ $_SESSION['autentificacion_tkm']=''; }

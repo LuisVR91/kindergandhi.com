@@ -19,7 +19,7 @@ function articulosList($idGrupo,$idActividad, $fecha, $idControl){
 // recuperando fecha
 
 $consultaArticulos="SELECT
-actividades.*, grupos.grupo, DATE_FORMAT(actividades.fecha, '%d/%m/%Y') AS fechaf
+actividades.*, grupos.grupo, DATE_FORMAT(actividades.fecha, '%d/%m/%Y') AS fechaf, grupos.mail
 
 FROM actividades
 
@@ -209,9 +209,7 @@ Agregar imagen
   ?>
 
 <?php
-$consultaimagen ="
-SELECT
-archivos_actividades.idArchivo, archivos.*
+$consultaimagen ="SELECT archivos_actividades.idArchivo, archivos.*
 FROM archivos_actividades
 
 LEFT JOIN archivos
@@ -291,10 +289,7 @@ Resuelve tus dudas
 
 
 <?php
-$consultaimagen ="
-SELECT
-* FROM preguntas
-
+$consultaimagen ="SELECT preguntas.* FROM preguntas
 WHERE
 preguntas.idActividad='$articulo[idActividad]'
 ORDER BY  idPreguntas DESC
@@ -302,7 +297,7 @@ ORDER BY  idPreguntas DESC
 ";
 
 $resultimagen= mysqli_query( $GLOBALS["enlace"] , $consultaimagen);
-$conteo=1;
+
 while($pregunta= mysqli_fetch_array($resultimagen, MYSQLI_ASSOC)){ ?>
 
 <li>
@@ -329,21 +324,22 @@ style="
 
 <?PHP 
 
-if($pregunta['respuesta']== ""){
+if($pregunta['respuesta']==""){
   
-  echo <<<EOT
+ ?>  
   <p style="color: white;padding: 3px 3px;background: red;margin-bottom: 5px;">
   Respuesta pendiente
   </p>
-  EOT;
 
+<?PHP 
 } else{
+?>
 
-  echo <<<EOT
+
   <p style="color: #4d4d4d;">
-  R= $pregunta[respuesta]
+  R= <?PHP echo $pregunta['respuesta']; ?>
   </p>
-  EOT;
+<?PHP
 
 }
 
@@ -359,16 +355,21 @@ if(($idControl==1) && ($pregunta['respuesta']=="")){
 
 <textarea name="respuesta" class="form-control" >
 </textarea>
+<?PHP 
+}
+?>
 </div>
 
-
+<?PHP 
+if(($idControl==1) && ($pregunta['respuesta']=="")){
+  ?>
 <div class="form-group clearfix">
 <button type="submit"  class="btn-primary btn pull-right">
   Responder
   </button>
   </div>
 
-<?PHP 
+  <?PHP 
 }
 ?>
 
@@ -388,7 +389,7 @@ if(($idControl==1) && ($pregunta['respuesta']=="")){
 
 <li>
 
-<form form0 <?PHP echo "result='art$articulo[idActividad]'"; ?>  cde='1_1_php'  name='add-pregunta' show-mod=''  hide-modal='' class="contact-form" method="post" enctype='multipart/form-data'
+<form form0 <?PHP echo "result='art$articulo[idActividad]'"; ?>  cde='1_1_php'  name='add-pregunta<?PHP echo $articulo['idActividad']; ?>' show-mod=''  hide-modal='' class="contact-form" method="post" enctype='multipart/form-data'
 style="
     padding: 8px;
     background: #ffffff;

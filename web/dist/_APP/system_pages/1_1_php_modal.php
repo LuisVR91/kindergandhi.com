@@ -265,7 +265,7 @@ data-date-format='d-m-Y' value="<?PHP echo $fecha; ?>">
 
 <?PHP 
 
-$rows = strlen($actividad['descripcion'])/90;
+$rows = strlen($actividad['descripcion'])/60;
 
 ?>
 

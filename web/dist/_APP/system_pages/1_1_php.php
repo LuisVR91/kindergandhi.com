@@ -190,21 +190,21 @@ $mensaje = '<html>'.
 	'<body><h1>pregunta</h1>'.
 	"$_REQUEST[pregunta]".
 	'<hr>'.
-	 "<a href='https://kindergandhi.com.mx/_APP/?p=$_REQUEST[idActividad]' >IR A RESPONDER</a>".
+	 "<a href='https://kindergandhi.com.mx/_APP/?actividad=$idActividad' >IR A RESPONDER</a>".
 	'</body>'.
     '</html>';
     
     $cabeceras = 'MIME-Version: 1.0' . "\r\n";
 $cabeceras .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
-$cabeceras .= 'From: kindergandhi.com.mx';
+$cabeceras .= 'From: informacion@kindergandhi.com.mx';
 
 $enviado = mail($para, $titulo, $mensaje, $cabeceras);
 
 if ($enviado)
-  echo 'Email enviado correctamente';
+  echo '';
 else
-  echo 'Error en el envío del email';
+  echo '';
 
 
 
