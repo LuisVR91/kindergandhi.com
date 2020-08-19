@@ -50,6 +50,41 @@ data-date-format='d-m-Y' value="<?PHP echo DATE("d/m/Y"); ?>">
 
 ?>
 
+<?PHP if($_REQUEST['action']=='edit-pregunta'){
+
+
+
+    
+    
+        // echo $_REQUEST["idActividad"];
+    
+        $col1="idPreguntas";
+        $col2="respuesta";
+    
+        $value1=relacion($_REQUEST['idPreguntas']);
+        $value2=relacion($_REQUEST['respuesta']);
+        
+        $consulta= "UPDATE preguntas SET
+        $col1=$value1,
+        $col2=$value2
+        WHERE idPreguntas='$_REQUEST[idPreguntas]' ";
+        $result = mysqli_query( $GLOBALS["enlace"] , $consulta);
+        
+        // echo $consulta;
+
+        include_once("1_1_contenido.php");
+        
+     
+    
+        articulosList("%",$_REQUEST['idActividad'],"%", $_REQUEST['idControl']);
+        
+    
+    
+    
+}
+?>
+
+
 <?PHP if($_REQUEST['action']=='edit-actividad'){
 
 
@@ -107,7 +142,78 @@ articulosList("%",$producto,"%", $_REQUEST['idControl']);
 
 
 
-<?PHP if($_REQUEST['action']=='add-actividad'){
+<?PHP 
+if($_REQUEST['action']=='add-pregunta'){
+
+
+    $col1="idActividad";
+    $col2="pregunta";
+    $col3="fecha";
+    $col4="status";
+    
+    // echo $_REQUEST['fecha'];
+    
+    $fecha= date('Y-m-d');
+    
+    $value1=relacion($_REQUEST['idActividad']);
+    $value2=relacion($_REQUEST['pregunta']);
+    $value3=relacion($fecha);
+    $value4=relacion("nueva");
+    
+    
+    
+    $consulta = "INSERT INTO preguntas
+    ($col1,$col2,$col3,$col4)
+    values
+    ($value1,$value2,$value3,$value4)";
+    
+    // echo $consulta;
+    $result = mysqli_query( $GLOBALS["enlace"] , $consulta);
+    $idActividad=mysqli_insert_id($GLOBALS["enlace"]);
+            
+    
+    include_once("1_1_contenido.php");
+
+
+    $idActividad=$_REQUEST['idActividad'];
+    articulosList("%",$idActividad,"%", $_REQUEST['idControl']);
+    
+   
+// insertar correo
+
+$para = $_REQUEST['mail'];
+
+$titulo = 'Preguntas';
+
+$mensaje = '<html>'.
+	'<head><title>Preguntas</title></head>'.
+	'<body><h1>pregunta</h1>'.
+	"$_REQUEST[pregunta]".
+	'<hr>'.
+	 "<a href='https://kindergandhi.com.mx/_APP/?p=$_REQUEST[idActividad]' >IR A RESPONDER</a>".
+	'</body>'.
+    '</html>';
+    
+    $cabeceras = 'MIME-Version: 1.0' . "\r\n";
+$cabeceras .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+
+$cabeceras .= 'From: kindergandhi.com.mx';
+
+$enviado = mail($para, $titulo, $mensaje, $cabeceras);
+
+if ($enviado)
+  echo 'Email enviado correctamente';
+else
+  echo 'Error en el envío del email';
+
+
+
+
+}
+
+
+
+if($_REQUEST['action']=='add-actividad'){
 
 
 $col1="idGrupo";
@@ -231,7 +337,7 @@ include_once("1_1_contenido.php");
 
 
 
-echo "<div class='col-sm-6'  respuesta='art$idActividad'>";
+echo "<div class='col-sm-6 col-md-offset-3'  respuesta='art$idActividad'>";
 
 articulosList("%",$idActividad,"%", $_REQUEST['idControl']);
 

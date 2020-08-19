@@ -78,7 +78,7 @@ if($idActividad=='%'){
 
 
 ECHO <<<EOT
-<div class="col-sm-4 col-md-offset-4" respuesta="art$articulo[idActividad]">
+<div class="col-sm-6 col-md-offset-3" respuesta="art$articulo[idActividad]">
 EOT;
 }else{
 ECHO <<<EOT
@@ -105,7 +105,7 @@ EOT;
 ">
 
 <!-- Post Gallery -->
-<div class="post-head" style="height: 210px;">
+<div class="post-head" >
 <div class="post-slider touch-slider">
 
 <?php
@@ -152,7 +152,7 @@ while($archivo= mysqli_fetch_array($resultArchivos, MYSQLI_ASSOC)){
               <!-- Post Content -->
 
               <div class="post-content">
-                <div class="post-type"><i class=" fa fa-picture-o"></i></div>
+                <div class="post-type"><i class=" fa fa-book"></i></div>
                 <h3><a href="#"><?php echo $articulo['fechaf']." ".$articulo['titulo']; ?></a></h3>
                 <ul class="post-meta">
                 <!--   <li>By <a href="#">iThemesLab</a></li> -->
@@ -190,7 +190,6 @@ Editar Información
 
 <li>
 <strong>Imagenes:
-<?PHP echo $idControl; ?>
 </strong>
 <br>
 
@@ -249,10 +248,183 @@ $conteo++;
 
 
 </ul>
-              <p>
+              <p style="
+    margin: 10px 0px;
+" >
               <?php
-              echo $articulo['descripcion']; ?>
+
+
+//filtro los enlaces normales
+$descripcion= preg_replace("/((http|https|www)[^\s]+)/", '<a target="_blank" href="$1" style="
+background: #c4efff;
+color: black;
+padding: 3px 20px;
+text-decoration: underline;
+">$0</a>', $articulo['descripcion']);
+//miro si hay enlaces con solamente www, si es así le añado el http://
+$descripcion= preg_replace("/href=\"www/", 'href="http://www', $descripcion);
+echo $descripcion;
+
+
+
+ ?>
               </p>
+
+              <ul class="icons-list" style="
+    border-radius: 1px;
+    border: solid 4px #dfdfdf;
+    padding: 3px 3px;
+    border-left: solid 1px #dfdfdf;
+    border-right: solid 1px #dfdfdf;
+    background: #dfdfdf;
+    color: white;
+    margin-top: 4rem;
+    
+    ">     
+<li>
+<h3>
+Resuelve tus dudas
+</h3>
+</li>
+
+ 
+
+
+<?php
+$consultaimagen ="
+SELECT
+* FROM preguntas
+
+WHERE
+preguntas.idActividad='$articulo[idActividad]'
+ORDER BY  idPreguntas DESC
+
+";
+
+$resultimagen= mysqli_query( $GLOBALS["enlace"] , $consultaimagen);
+$conteo=1;
+while($pregunta= mysqli_fetch_array($resultimagen, MYSQLI_ASSOC)){ ?>
+
+<li>
+
+<form form0 <?PHP echo "result='art$articulo[idActividad]'"; ?>  <?PHP echo "name='pregunta$pregunta[idPreguntas]'"; ?>  cde='1_1_php'   show-mod=''  hide-modal='' class="contact-form" method="post" enctype='multipart/form-data'
+style="
+    padding: 12px 8px;
+    background: #f3f3f3;
+"
+>
+
+
+<input type="hidden" name='idControl' value='<?PHP echo $_SESSION['idControl']; ?>' >
+
+<input type="hidden" name='idPreguntas' value="<?PHP echo $pregunta['idPreguntas'];?>">
+
+<input type="hidden" name='idActividad' value="<?PHP echo $pregunta['idActividad'];?>">
+
+
+
+<input type="hidden" name='action' value='edit-pregunta'>
+<div class="form-group">
+<label><?PHP echo "$pregunta[pregunta]"; ?></label>
+
+<?PHP 
+
+if($pregunta['respuesta']== ""){
+  
+  echo <<<EOT
+  <p style="color: white;padding: 3px 3px;background: red;margin-bottom: 5px;">
+  Respuesta pendiente
+  </p>
+  EOT;
+
+} else{
+
+  echo <<<EOT
+  <p style="color: #4d4d4d;">
+  R= $pregunta[respuesta]
+  </p>
+  EOT;
+
+}
+
+
+
+
+?>
+
+<?PHP 
+if(($idControl==1) && ($pregunta['respuesta']=="")){
+  ?>
+  
+
+<textarea name="respuesta" class="form-control" >
+</textarea>
+</div>
+
+
+<div class="form-group clearfix">
+<button type="submit"  class="btn-primary btn pull-right">
+  Responder
+  </button>
+  </div>
+
+<?PHP 
+}
+?>
+
+
+
+</form>
+
+</li>
+
+
+
+<?PHP 
+}
+?>
+
+
+
+<li>
+
+<form form0 <?PHP echo "result='art$articulo[idActividad]'"; ?>  cde='1_1_php'  name='add-pregunta' show-mod=''  hide-modal='' class="contact-form" method="post" enctype='multipart/form-data'
+style="
+    padding: 8px;
+    background: #ffffff;
+    border-radius: 6px;
+    border: solid 1px #b8b8b8;
+    box-shadow: 1px 1px 4px -2px black;
+"
+>
+<input type="hidden" name='idActividad' value="<?PHP echo $articulo['idActividad'];?>">
+<input type="hidden" name='action' value='add-pregunta'>
+<input type="hidden" name='idControl' value='<?PHP echo $_SESSION['idControl']; ?>'>
+<input type="hidden" name='grupo' value='<?PHP echo $articulo['grupo']; ?>'>
+<input type="hidden" name='mail' value='<?PHP echo $articulo['mail']; ?>'>
+
+
+
+
+<div class="form-group">
+<label>Agrega tu pregunta</label>
+<textarea name="pregunta" class="form-control" >
+</textarea>
+</div>
+
+
+<div class="form-group clearfix">
+<button type="submit"  class="btn-primary btn pull-right">
+  Preguntar
+  </button>
+  </div>
+
+
+</form>
+
+</li>
+
+    </ul>        
 
 
 

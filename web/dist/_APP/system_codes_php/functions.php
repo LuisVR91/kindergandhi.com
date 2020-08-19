@@ -309,16 +309,16 @@ function text($texto){
      $texto=str_replace(">","&gt;",$texto);
      $texto=str_replace("'","&#39;",$texto);
      $texto=str_replace('"','&#34;',$texto);
-     $texto=str_replace("\n","<br>",$texto);
+     $texto=str_replace("\n"," <br> ",$texto);
      echo  $texto;
      }
 
      function textr($texto){
-    $texto=str_replace("<br>","\n",$texto);
+    $texto=str_replace(" <br> ","\n",$texto);
      echo  $texto;
      }
        function textb($texto){
-    $texto=str_replace("<br>","",$texto);
+    $texto=str_replace(" <br> ","",$texto);
      echo  $texto;
      }
 
@@ -335,7 +335,7 @@ function relacion($value){
      $value=str_replace(">","&gt;",$value);
      $value=str_replace("'","&#39;",$value);
      $value=str_replace('"','&#34;',$value);
-     $value=str_replace("\n","<br>",$value);
+     $value=str_replace("\n"," <br> ",$value);
 
 
     if(($value!='') OR ($value!="")){$value = "'".$value."'"; }elseif(($value=='') OR ($value=="")){$value= "NULL";

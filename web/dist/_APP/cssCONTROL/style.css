@@ -128,7 +128,7 @@ h6 {
 }
 
 p {
-    color: #666;
+    color: #000;
     font-size: 13px;
     font-family: 'Open Sans', sans-serif;
     line-height: 22px;
@@ -3585,8 +3585,8 @@ and (min-width : 551px){
 	height: auto;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
 }
 
 .blog-post .post-content {
